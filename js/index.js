@@ -4,7 +4,7 @@ let footer = document.querySelector('footer');
 let copyright = document.createElement('p');
 copyright.innerHTML = 'Wayne Lee ' + thisYear;
 footer.appendChild(copyright);
-let skills = ["git", 'GitHub', 'HTML', 'CSS', 'JavaScript'];
+let skills = ["Microsoft", 'Google', 'Open source'];
 let skillsList = document.getElementById('skills').querySelector('ul');
 for (let i = 0; i < skills.length; i++) {
     let skill = document.createElement('li');
