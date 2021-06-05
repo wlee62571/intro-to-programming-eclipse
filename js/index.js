@@ -11,3 +11,14 @@ for (let i = 0; i < skills.length; i++) {
     skill.innerHTML = skills[i];
     skillsList.appendChild(skill);
 }
+let messageForm = document.getElementsByName("leave_message");
+document.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let messagePersonName = event.target.name.value;
+    let messagePersonEmail = event.target.email.value;
+    let messagePersonSent = event.target.message.value;
+    console.log(messagePersonName);
+    console.log(messagePersonEmail);
+    console.log(messagePersonSent);
+    event.target.reset();
+});
