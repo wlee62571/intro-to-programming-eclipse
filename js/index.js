@@ -20,9 +20,5 @@ document.addEventListener('submit', (event) => {
     console.log(messagePersonName);
     console.log(messagePersonEmail);
     console.log(messagePersonSent);
-    let messageSection = document.getElementById('#messages');
-    //let newMessage = [messagePersonName, mailto:messagePersonEmail, messagePersonSent];
-    
-    messageSection.appendChild(newMessage);
     event.target.reset();
 });
