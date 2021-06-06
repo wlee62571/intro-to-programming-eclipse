@@ -20,5 +20,18 @@ document.addEventListener('submit', (event) => {
     console.log(messagePersonName);
     console.log(messagePersonEmail);
     console.log(messagePersonSent);
+    let messageSection = document.getElementById('messages');
+    let messageList = messageSection.querySelector('ul');
+    let newMessage = document.createElement('li');
+    newMessage.innerHTML = `<a href='mailto:${messagePersonEmail}'>${messagePersonName}</a> wrote: <span>${messagePersonSent}</span> `;
+    let removeButton = document.createElement('button');
+    removeButton.innerText = 'remove';
+    removeButton.type = 'button';
+    removeButton.addEventListener('click', (e) => {
+        let entry = removeButton.parentNode;
+        entry.remove();
+    })
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
     event.target.reset();
 });
