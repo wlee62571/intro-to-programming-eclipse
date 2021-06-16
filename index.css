@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+    color: cornsilk;
+    font-family: sans-serif, monospace;
+}
+section {
+    padding: 1.01rem;
+    margin: 1.01rem;
+}
+h2 {
+    font-size: 20px;
+    font-weight: lighter;
+    color: yellow;
+}
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+p {
+    margin-bottom: 2rem;
+}
+.listSkills {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+a {
+    background-color: blanchedalmond;
+}
+label {
+    font-size: large;
+    color: burlywood;
+}
+input {
+    font-size: small;
+    padding: 0rem;
+    border: dotted;
+    margin-bottom: 20px;
+}
+textarea {
+    font-size: large;
+    padding: 0em;
+    border: dashed;
+}
+#submitButton {
+    padding: .5%;
+    background-color: orange;
+    border: double;
+    float: left;
+}
+button {
+    padding: 0rem;
+    background-color: plum;
+    float: right;
+}
+.listMessages {
+    background-color: lightyellow;
+    color: black;
+}
+footer {
+    background-color: darkslategrey;
+    word-spacing: 5px;
+}
