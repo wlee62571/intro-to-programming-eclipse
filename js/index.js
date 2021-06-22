@@ -23,9 +23,10 @@ document.addEventListener('submit', (event) => {
     let messageSection = document.getElementById('messages');
     let messageList = messageSection.querySelector('ul');
     let newMessage = document.createElement('li');
-    newMessage.innerHTML = `<a href='mailto:${messagePersonEmail}'>${messagePersonName}</a> wrote: <span>${messagePersonSent}</span> `;
+    let now = today.toLocaleString();
+    newMessage.innerHTML = `<a href='mailto:${messagePersonEmail}'>${messagePersonName}</a> on ${now} wrote: <span>${messagePersonSent}</span> `;
     let removeButton = document.createElement('button');
-    removeButton.innerText = 'remove';
+    removeButton.innerText = 'Remove';
     removeButton.type = 'button';
     removeButton.addEventListener('click', (e) => {
         let entry = removeButton.parentNode;
