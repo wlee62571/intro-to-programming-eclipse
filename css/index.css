@@ -3,6 +3,9 @@ body {
     color: cornsilk;
     font-family: sans-serif, monospace;
 }
+.menuItems li {
+    display: inline-block;
+}
 section {
     padding: 1.01rem;
     margin: 1.01rem;
@@ -19,12 +22,20 @@ ul {
 p {
     margin-bottom: 2rem;
 }
+#experience ul {
+    display: grid;
+    grid-template-columns: 175px auto;
+    grid-gap: 20px;
+}
 .listSkills {
     list-style-type: disc;
     padding-left: 2rem;
 }
 a {
     background-color: blanchedalmond;
+}
+form {
+    display: flex;
 }
 label {
     font-size: large;
@@ -48,6 +59,7 @@ button {
 }  
 #submitButton {
     padding: .5%;
+    font-size: large;
     background-color: orange;
     border: double;
     float: left;
@@ -67,8 +79,11 @@ footer {
     }
 }
 /* phone */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     body {
         background-color: maroon;
+    }
+    form {
+        display: block;
     }
 }

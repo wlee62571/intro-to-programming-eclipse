@@ -2,7 +2,7 @@ let today = new Date();
 let thisYear = today.getFullYear();
 let footer = document.querySelector('footer');
 let copyright = document.createElement('p');
-copyright.innerHTML = 'Wayne Lee ' + thisYear;
+copyright.innerHTML = '&copy; Wayne Lee ' + thisYear;
 footer.appendChild(copyright);
 let skills = ["Microsoft", 'Google', 'Open source'];
 let skillsList = document.getElementById('skills').querySelector('ul');
