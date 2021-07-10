@@ -36,17 +36,32 @@ document.addEventListener('submit', (event) => {
     messageList.appendChild(newMessage);
     event.target.reset();
 });
-let githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/wlee62571/repos");
-githubRequest.send();
-githubRequest.addEventListener("load", function(event) {
-    let repositories = JSON.parse(githubRequest.response);
-    console.log(repositories);
+
+// AJAX
+// let githubRequest = new XMLHttpRequest();
+// githubRequest.open("GET", "https://api.github.com/users/wlee62571/repos");
+// githubRequest.send();
+// githubRequest.addEventListener("load", function(event) {
+//     let repositories = JSON.parse(githubRequest.response);
+//     let projectSection = document.getElementById('projects');
+//     let projectList = projectSection.querySelector('ul');
+//     for (let i = 0; i < repositories.length; i++) {
+//         let project = document.createElement('li');
+//         project.innerText = repositories[i].name;
+//         projectList.appendChild(project);
+//     }
+// });
+
+// fetch
+fetch("https://api.github.com/users/wlee62571/repos")
+.then(response => response.json())
+.then(data => {
+    let repositories = data;
     let projectSection = document.getElementById('projects');
     let projectList = projectSection.querySelector('ul');
     for (let i = 0; i < repositories.length; i++) {
-    let project = document.createElement('li');
-    project.innerText = repositories[i].name;
-    projectList.appendChild(project);
+        let project = document.createElement('li');
+        project.innerText = repositories[i].name;
+        projectList.appendChild(project);
     }
 });

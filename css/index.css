@@ -5,6 +5,7 @@ body {
 }
 .menuItems li {
     display: inline-block;
+    padding: 8px;
 }
 section {
     padding: 1.01rem;
@@ -36,6 +37,8 @@ a {
 }
 form {
     display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 label {
     font-size: large;
@@ -67,6 +70,9 @@ button {
 .listMessages {
     background-color: lightyellow;
     color: black;
+}
+span {
+    background-color: lightpink;
 }
 footer {
     background-color: darkslategrey;
