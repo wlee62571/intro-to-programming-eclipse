@@ -3,19 +3,22 @@ body {
     color: cornsilk;
     font-family: sans-serif, monospace;
 }
+.menuItems {
+    position: fixed;
+    top: 0;
+}
 .menuItems li {
     display: inline-block;
     border: 1px solid red;
-    padding: 8px;
 }
-section {
-    padding: 1.01rem;
-    margin: 1.01rem;
+h1 {
+    margin-top: 4rem;
 }
 h2 {
     font-size: 20px;
     font-weight: lighter;
     color: yellow;
+    padding-top: 4rem;
 }
 ul {
     list-style-type: none;
@@ -87,8 +90,14 @@ span {
     background-color: lightpink;
 }
 footer {
-    background-color: darkslategrey;
     word-spacing: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+#socialMediaLinks {
+    display: flex;
+    gap: 20px;
 }
 /* tablet */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {

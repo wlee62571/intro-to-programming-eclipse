@@ -64,7 +64,7 @@ fetch("https://api.github.com/users/wlee62571/repos")
     let projectList = projectSection.querySelector('ul');
     for (let i = 0; i < repositories.length; i++) {
         let project = document.createElement('li');
-        project.innerHTML = `<a href='${repositories[i].html_url}'>${repositories[i].name}: ${repositories[i].description}</a>`;
+        project.innerHTML = `<a href='${repositories[i].html_url}' target="_blank">${repositories[i].name}: ${repositories[i].description}</a>`;
         projectList.appendChild(project);
     }
 });
