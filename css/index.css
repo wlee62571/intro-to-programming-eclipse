@@ -5,6 +5,7 @@ body {
 }
 .menuItems li {
     display: inline-block;
+    border: 1px solid red;
     padding: 8px;
 }
 section {
@@ -29,11 +30,17 @@ p {
     grid-gap: 20px;
 }
 .listSkills {
+    display: grid;
+    grid-template-columns: auto;
     list-style-type: disc;
     padding-left: 2rem;
 }
 a {
-    background-color: blanchedalmond;
+    background-color: linen;
+}
+#projects a {
+    background-color: black;
+    color: lime;
 }
 form {
     display: flex;
@@ -67,7 +74,12 @@ button {
     border: double;
     float: left;
 }
+#messages {
+    display: none;
+}
 .listMessages {
+    display: grid;
+    grid-template-columns: auto;
     background-color: lightyellow;
     color: black;
 }
@@ -80,15 +92,13 @@ footer {
 }
 /* tablet */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    body {
-        background-color: brown;
+    .listSkills {
+        list-style-type: square;
+        padding-left: 2rem;
     }
 }
 /* phone */
 @media only screen and (max-width: 750px) {
-    body {
-        background-color: maroon;
-    }
     form {
         display: block;
     }

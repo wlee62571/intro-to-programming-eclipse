@@ -23,6 +23,9 @@ document.addEventListener('submit', (event) => {
     let messageSection = document.getElementById('messages');
     let messageList = messageSection.querySelector('ul');
     let newMessage = document.createElement('li');
+    if (newMessage) {
+        messageSection.style.display = 'block';
+    }
     let now = today.toLocaleString();
     newMessage.innerHTML = `<a href='mailto:${messagePersonEmail}'>${messagePersonName}</a> on ${now} wrote: <span>${messagePersonSent}</span> `;
     let removeButton = document.createElement('button');
@@ -50,7 +53,7 @@ document.addEventListener('submit', (event) => {
 //         project.innerText = repositories[i].name;
 //         projectList.appendChild(project);
 //     }
-// });
+// })
 
 // fetch
 fetch("https://api.github.com/users/wlee62571/repos")
@@ -61,7 +64,7 @@ fetch("https://api.github.com/users/wlee62571/repos")
     let projectList = projectSection.querySelector('ul');
     for (let i = 0; i < repositories.length; i++) {
         let project = document.createElement('li');
-        project.innerText = repositories[i].name;
+        project.innerHTML = `<a href='${repositories[i].html_url}'>${repositories[i].name}: ${repositories[i].description}</a>`;
         projectList.appendChild(project);
     }
 });
