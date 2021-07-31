@@ -3,13 +3,17 @@ body {
     color: cornsilk;
     font-family: sans-serif, monospace;
 }
-.menuItems {
+/*.menuItems {
     position: fixed;
     top: 0;
-}
+}*/
 .menuItems li {
     display: inline-block;
     border: 1px solid red;
+}
+.menuItems li a {
+    background-color: linen;
+    padding: 8px;
 }
 h1 {
     margin-top: 4rem;
